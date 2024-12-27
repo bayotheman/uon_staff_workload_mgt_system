@@ -5,8 +5,11 @@ import com.example.assignment.backend.models.Workload;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.Objects;
 
-public abstract class Staff implements Serializable {
+public abstract class Staff
+        implements Serializable
+{
 
     @Serial
     private static final long serialVersionUID = 1L;
@@ -74,5 +77,18 @@ public abstract class Staff implements Serializable {
 
     public void setSchedule(Workload schedule) {
         this.schedule = schedule;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Staff staff = (Staff) o;
+        return firstName.equals(staff.firstName) && lastName.equals(staff.lastName) && email.equals(staff.email) && id.equals(staff.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, email, id);
     }
 }

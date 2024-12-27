@@ -53,7 +53,9 @@ public class ConfigurationManager {
     }
 
 
-
+//    public SystemConfig getSystemConfig(){
+//        return systemConfig;
+//    }
     public SystemConfig readConfiguration() throws ConfigurationException {
 //        SystemConfig systemConfig = new SystemConfig();
         // Access properties
