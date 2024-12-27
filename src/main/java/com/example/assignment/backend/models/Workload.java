@@ -1,5 +1,6 @@
 package com.example.assignment.backend.models;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,6 +12,9 @@ import java.util.List;
  * @author Adebayo. A. Okutubo
  */
 public class Workload implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
     private final List<Activity> activities = new ArrayList<>();
 
 
