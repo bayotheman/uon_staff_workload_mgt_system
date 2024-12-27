@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class FileManager {
 
-    public static final String FILE_EXTENSION = ".dat";
+/**
+ * A class that handles File management such as creating, saving and deleting files.
+ */
+public class FileManager {
 
     private FileManager(){}
 
@@ -31,14 +33,14 @@ public class FileManager {
         }
     }
 
-    public static List<Serializable> getAll(String directoryPath){
+    public static List<Serializable> getAll(String directoryPath, String fileExtension){
         File directory = new File(directoryPath);
         List<Serializable> datFiles = new ArrayList<>();
 
         // Ensure the path is a directory
         if (directory.isDirectory()) {
             // List all files in the directory
-            File[] files = directory.listFiles((dir, name) -> name.endsWith(FILE_EXTENSION));
+            File[] files = directory.listFiles((dir, name) -> name.endsWith(fileExtension));
 
             // Add the .dat files to the list
             if (files != null) {

@@ -66,7 +66,7 @@ public class FileManagerTest {
             FileManager.save(filename, originalObject);
         }
 
-        List<Serializable> retrieved = FileManager.getAll(TEST_DIR);
+        List<Serializable> retrieved = FileManager.getAll(TEST_DIR, ".dat");
         assertEquals(4, retrieved.size());
     }
     @Test
