@@ -6,30 +6,31 @@ import com.example.assignment.backend.models.Activity;
  * Handles Activity management such as creation, update, read and deletion operations
  */
 
-public class ActivityManagerImpl implements ActivityManager<Object> {
+public class ActivityManagerImpl implements ActivityManager<Activity> {
 //    private final FileManager fileManager;
+
 
     public ActivityManagerImpl() {
 
     }
 
     @Override
-    public Activity create(Object obj) {
-        return null;
+    public Activity create(Activity obj) {
+        return ActivityManager.super.create(obj);
     }
 
     @Override
     public Activity update(String id) {
-        return null;
+        return ActivityManager.super.update(id);
     }
 
     @Override
     public void delete(String id) {
-
+        ActivityManager.super.delete(id);
     }
 
     @Override
     public Activity get(String id) {
-        return null;
+        return ActivityManager.super.get(id);
     }
 }
