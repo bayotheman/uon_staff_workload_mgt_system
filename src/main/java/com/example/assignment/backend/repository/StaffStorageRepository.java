@@ -13,10 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A class that handles the nutty-gritty of Lecturer class object storage
+ * A class that handles the Lecturer class object storage.
  */
 public class StaffStorageRepository implements Repository<String, Staff> {
     private String dir;
+    private final static String FILE_EXTENSION = ".dat";
 
 
     public StaffStorageRepository(ConfigurationManager configurationManager) throws ConfigurationException {
@@ -24,22 +25,22 @@ public class StaffStorageRepository implements Repository<String, Staff> {
     }
 
     public void save(String filename, Staff lecturer ) throws IOException {
-        FileManager.save(dir +"/%s.dat".formatted(filename),lecturer);
+        FileManager.save(dir +"/%s.%s".formatted(filename,FILE_EXTENSION),lecturer);
     }
 
     @Override
     public void delete(String filename) throws IOException {
-        FileManager.delete(dir +"/%s.dat".formatted(filename));
+        FileManager.delete(dir +"/%s.%s".formatted(filename, FILE_EXTENSION));
     }
 
     @Override
     public Lecturer get(String id) throws IOException, ClassNotFoundException {
-        return (Lecturer) FileManager.get(dir + "/" + id +".dat");
+        return (Lecturer) FileManager.get(dir + "/%s.%s".formatted(id, FILE_EXTENSION));
     }
 
     @Override
     public List<Staff> findAll() throws IOException, ClassNotFoundException {
-        List<Serializable> all = FileManager.getAll(dir);
+        List<Serializable> all = FileManager.getAll(dir, FILE_EXTENSION);
         List<Staff> result = new ArrayList<>();
         for(Serializable obj : all){
             String path = ((File)obj).getPath();

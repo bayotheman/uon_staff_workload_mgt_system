@@ -1,4 +1,4 @@
 package com.example.assignment.backend.repository;
 
-public class IndexStorageRepository {
+public class IndexStorageRepository<K, V>  {
 }
