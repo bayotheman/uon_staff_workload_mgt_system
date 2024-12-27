@@ -2,6 +2,7 @@ package com.example.assignment.backend.models;
 
 import com.example.assignment.backend.exceptions.InvalidYearException;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -9,6 +10,9 @@ import java.io.Serializable;
  * @author Adebayo .A. Okutubo
  */
 public class Activity implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
     private String id;
     private ActivityType type;
     private String description;
