@@ -1,5 +1,6 @@
 package com.example.assignment.backend.models.staff;
 
+import com.example.assignment.backend.models.Activity;
 import com.example.assignment.backend.models.StaffContractType;
 import com.example.assignment.backend.models.Workload;
 
@@ -21,7 +22,7 @@ public abstract class Staff
     Manager manager;
     private StaffContractType contractType;
 
-    private Workload schedule;
+    private Workload schedule = new Workload();
 
     public String getFirstName() {
         return firstName;
@@ -77,6 +78,10 @@ public abstract class Staff
 
     public void setSchedule(Workload schedule) {
         this.schedule = schedule;
+    }
+
+    public void addActivity(Activity activity){
+        schedule.addActivity(activity);
     }
 
     @Override

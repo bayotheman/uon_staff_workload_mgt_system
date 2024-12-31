@@ -1,3 +1,5 @@
+import com.example.assignment.backend.models.Activity;
+import com.example.assignment.backend.models.ActivityType;
 import com.example.assignment.backend.models.staff.Lecturer;
 import com.example.assignment.backend.models.staff.Staff;
 import com.example.assignment.backend.repository.StaffStorageRepository;
@@ -10,6 +12,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.UUID;
 
 public class StaffStorageRepositoryTest {
 
@@ -28,6 +31,12 @@ public class StaffStorageRepositoryTest {
         originalObject.setLastName("Okutubo");
         originalObject.setEmail("adebayo@gmail.com");
         originalObject.setId("123455");
+
+        Activity activity = new Activity();
+        activity.setId(UUID.randomUUID().toString());
+        activity.setType(ActivityType.ATS);
+
+        originalObject.addActivity(activity);
 
         staffStorageRepository.save(originalObject.getId(), originalObject);
 //        staffStorageRepository.save(originalObject.getId(), originalObject);
