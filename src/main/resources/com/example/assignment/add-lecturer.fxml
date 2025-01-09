@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.Priority?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment.ui.controller.AddLecturerController"
+      alignment="CENTER" spacing="10">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="5.0" top="0.0"/>
+    </padding>
+
+    <!-- Staff Details -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="First Name:" />
+        <TextField fx:id="firstNameField" promptText="Enter First Name" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Last Name:" />
+        <TextField fx:id="lastNameField" promptText="Enter Last Name" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Email:" />
+        <TextField fx:id="emailField" promptText="Enter Email" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Lecturer ID:" />
+        <TextField fx:id="idField" promptText="Enter Lecturer ID" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Subject Area:" />
+        <TextField fx:id="subjectAreaField" promptText="Enter Subject Area" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Manager ID:" />
+        <TextField fx:id="managerIdField" promptText="Enter Manager ID" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Contract Type:" />
+        <ComboBox fx:id="contractTypeComboBox" promptText="Select Contract Type">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Full Time"/>
+                    <String fx:value="Part Time"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </HBox>
+
+    <!-- Action Buttons -->
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="submitButton" text="Submit" onAction="#handleSubmit" />
+        <Button fx:id="cancelButton" text="Cancel" onAction="#handleCancel" />
+    </HBox>
+
+</VBox>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment.ui.controller.AddActivityController" spacing="5" alignment="CENTER" >
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="5.0" top="0.0"/>
+    </padding>
+
+<!--    <HBox spacing="10" alignment="CENTER_LEFT">-->
+<!--        <Label text="Staff ID:" />-->
+<!--        <TextField fx:id="staffIdField" promptText="Enter Staff ID" />-->
+<!--    </HBox>-->
+
+<!--    <HBox spacing="10" alignment="CENTER_LEFT">-->
+<!--        <Label text="Activity ID:" />-->
+<!--        <TextField fx:id="idField" promptText="Enter Activity ID" />-->
+<!--    </HBox>-->
+
+    <HBox spacing="10"  alignment="CENTER_LEFT">
+        <Label text="Activity Type:" />
+        <ComboBox fx:id="activityTypeComboBox" promptText="Select Activity Type" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Description:" />
+        <TextField fx:id="descriptionField" promptText="Enter Description" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Duration (hours):" />
+        <TextField fx:id="durationField" promptText="Enter Duration (hours)" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Semester:" />
+        <ComboBox fx:id="semesterComboBox" promptText="Select Semester" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Number of Instances:" />
+        <TextField fx:id="instancesField" promptText="Enter Number of Instances" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Year:" />
+        <TextField fx:id="yearField" promptText="Enter Year" />
+    </HBox>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="submitButton" text="Submit" onAction="#handleSubmit" />
+        <Button fx:id="cancelButton" text="Cancel" onAction="#handleCancel" />
+    </HBox>
+
+</VBox>

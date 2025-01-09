@@ -3,7 +3,7 @@ package com.example.assignment.backend.models.dto;
 import com.example.assignment.backend.models.StaffContractType;
 import com.example.assignment.backend.models.staff.Manageable;
 
-public class CreateStaff implements Manageable {
+public class UpdateStaff implements Manageable {
     private String firstName;
     private String lastName;
     private String email;
@@ -62,6 +62,10 @@ public class CreateStaff implements Manageable {
     public void setSubjectArea(String subjectArea) {
         this.subjectArea = subjectArea;
     }
+
+//    public String getManagerId() {
+//        return managerId;
+//    }
 
     public void setManagerId(String managerId) {
         this.managerId = managerId;

@@ -1,16 +1,10 @@
-package com.example.assignment.backend.models;
+package com.example.assignment.backend.models.dto;
 
-
-import java.io.Serial;
-import java.io.Serializable;
-
-public class Semester implements Serializable {
-
-    @Serial
-    private static final long serialVersionUID = 1L;
+public class CreateSemester {
     private String name;
     private String info;
     private String session;
+
 
     public String getName() {
         return name;

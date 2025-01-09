@@ -1,6 +1,6 @@
 package com.example.assignment.backend.services;
 
-import com.example.assignment.backend.exceptions.InvalidObjectCreationException;
+import com.example.assignment.backend.exceptions.InvalidObjectException;
 import com.example.assignment.backend.exceptions.NoImplementationException;
 
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.util.List;
 public interface StaffManager<T> {
 
 
-    default void create(T obj) throws InvalidObjectCreationException, IOException {
+    default void create(T obj) throws InvalidObjectException, IOException {
         throw new NoImplementationException("");
     }
 

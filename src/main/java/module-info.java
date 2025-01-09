@@ -12,11 +12,15 @@ module com.example.assignment {
 
 
 
-    opens com.example.assignment to javafx.fxml;
+    opens com.example.assignment to javafx.fxml, javafx.graphics;
     exports com.example.assignment.backend.models.staff;
     exports com.example.assignment.backend.services;
     exports com.example.assignment.backend.models;
     exports com.example.assignment.backend.repository;
+    exports com.example.assignment.backend.exceptions;
+    exports com.example.assignment.backend.models.dto;
+    exports com.example.assignment.ui.controller;
+    opens com.example.assignment.ui.controller to javafx.fxml, javafx.graphics;
 
 
 }

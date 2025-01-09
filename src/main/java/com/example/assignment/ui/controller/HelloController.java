@@ -1,4 +1,4 @@
-package com.example.assignment;
+package com.example.assignment.ui.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

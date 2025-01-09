@@ -20,8 +20,7 @@ public class StaffStorageRepositoryTest {
 
     @BeforeAll
     public static void init() throws ConfigurationException {
-        ConfigurationManager  configurationManager = new ConfigurationManager();
-        staffStorageRepository = new StaffStorageRepository(configurationManager);
+        staffStorageRepository = StaffStorageRepository.getInstance();
     }
 
     @Test
